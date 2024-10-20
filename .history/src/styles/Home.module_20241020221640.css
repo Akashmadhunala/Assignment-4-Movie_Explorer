@@ -1,0 +1,12 @@
+/* Home.module.css */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  

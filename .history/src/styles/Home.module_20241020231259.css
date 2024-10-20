@@ -1,0 +1,14 @@
+.home {
+  padding: 20px;
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieItem {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,44 @@
+.watchlist {
+    padding: 20px;
+  }
+  
+  .watchlist h2 {
+    font-size: 2rem;
+  }
+  
+  .movieList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movieItem {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .movieItem img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .movieItem h3 {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .movieItem button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .movieItem button:hover {
+    background-color: #c9302c;
+  }
+  
