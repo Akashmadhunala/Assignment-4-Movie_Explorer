@@ -1,0 +1,38 @@
+.search {
+  padding: 20px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+/* Search.module.css */
+.searchResults {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Style the movie list to display horizontally */
+.movieList {
+  display: flex;
+  flex-wrap: nowrap;   /* Ensure that the items do not wrap to the next line */
+  overflow-x: auto;    /* Allow horizontal scrolling if items overflow */
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Individual movie cards should have consistent width */
+.movieCard {
+  min-width: 200px;    /* Set a minimum width for each movie card */
+  flex-shrink: 0;      /* Prevent movie cards from shrinking */
+}
+
+.movieCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
