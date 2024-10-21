@@ -6,13 +6,13 @@ import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
 import Search from './pages/Search';
 import WatchlistPage from './pages/WatchlistPage';
-import './styles/global.css'; // Global styles
+import './styles/global.css';
 
 const AppContent = () => {
-  const { theme } = useContext(ThemeContext); // Get current theme from context
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`app ${theme}`}> {/* Apply theme to entire app */}
+    <div className={theme}> {/* Apply the theme to the entire app */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
