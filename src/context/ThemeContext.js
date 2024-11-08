@@ -1,3 +1,4 @@
+// context/ThemeContext.js
 import React, { createContext, useState, useEffect } from 'react';
 
 export const ThemeContext = createContext();
@@ -9,7 +10,6 @@ export const ThemeProvider = ({ children }) => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
-  // Save the theme preference in local storage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -23,7 +23,9 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={theme}>{children}</div>
+      <div className={theme}> {/* Apply theme class to wrap entire app */}
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 };

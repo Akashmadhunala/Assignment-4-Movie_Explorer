@@ -25,18 +25,15 @@ const Watchlist = () => {
         <ul className={styles.movieList}>
           {watchlist.map((movie) => (
             <li key={movie.id} className={styles.movieItem}>
-              <Link to={`/movie/${movie.id}`}>
+              <Link to={`/movie/${movie.id}`} className={styles.link}>
                 <img
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                   alt={movie.title}
+                  className={styles.poster}
                 />
-              </Link>
-              <div>
                 <h3>{movie.title}</h3>
-                <button onClick={() => removeFromWatchlist(movie.id)}>
-                  Remove
-                </button>
-              </div>
+              </Link>
+              <button onClick={() => removeFromWatchlist(movie.id)}>Remove</button>
             </li>
           ))}
         </ul>

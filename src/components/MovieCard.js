@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles/MovieCard.module.css';
 
 const MovieCard = ({ movie }) => {
@@ -17,8 +18,14 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div className={styles.movieCard}>
-      <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
-      <h3>{movie.title}</h3>
+      <Link to={`/movie/${movie.id}`}>
+        <img
+          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+          alt={movie.title}
+          className={styles.poster}
+        />
+        <h3>{movie.title}</h3>
+      </Link>
       <button onClick={addToWatchlist}>Add to Watchlist</button>
     </div>
   );

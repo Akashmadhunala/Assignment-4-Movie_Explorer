@@ -1,3 +1,4 @@
+// App.js
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
@@ -6,10 +7,10 @@ import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
 import Search from './pages/Search';
 import WatchlistPage from './pages/WatchlistPage';
-import './styles/global.css'; // Global styles
+import './styles/global.css';
 
 const AppContent = () => {
-  const { theme } = useContext(ThemeContext); // Get current theme from context
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div className={`app ${theme}`}> {/* Apply theme to entire app */}

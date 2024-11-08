@@ -9,20 +9,16 @@ const Search = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get('query');
 
-  // Fetch search results using React Query and TMDb API
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['searchMovies', query], // Include search query in the queryKey
-    queryFn: () => searchMovies(query), // Function to fetch movies based on the query
+  const { data = [], isLoading, error } = useQuery({
+    queryKey: ['searchMovies', query],
+    queryFn: () => searchMovies(query),
     enabled: !!query, // Only run this query if there is a search query
   });
 
   if (isLoading) return <div>Searching for movies...</div>;
   if (error) return <div>Error fetching search results.</div>;
 
-  // Handle case when no movies are found
-  if (!data || data.length === 0) {
-    return <div>No movies found for "{query}".</div>;
-  }
+  if (data.length === 0) return <div>No movies found for "{query}".</div>;
 
   return (
     <div className={styles.searchResults}>
